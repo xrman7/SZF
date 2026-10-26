@@ -1,0 +1,94 @@
+*{box-sizing:border-box}
+:root{
+  --ink:#1E1E1E;
+  --muted:#757575;
+  --line:#D9D9D9;
+  --line-soft:#EDEDED;
+  --btn-alt:#E3E3E3;
+  --ph:#F2F2F2;
+  --radius:8px;
+  --max:1280px;
+}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--muted)}
+h1,h2,h3,p,figure,blockquote{margin:0}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand{font-weight:600;font-size:16px;letter-spacing:-.01em}
+.nav{display:flex;align-items:center;gap:28px;flex-wrap:wrap;font-size:15px;font-weight:500}
+
+/* Buttons */
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:12px 20px;border-radius:var(--radius);font-weight:500;font-size:16px}
+.btn:hover{color:#fff;opacity:.85}
+.btn-alt{background:var(--btn-alt);color:var(--ink)}
+.btn-alt:hover{color:var(--ink)}
+.btn-sm{padding:10px 16px;font-size:15px}
+
+/* Layout */
+main{max-width:var(--max);margin:0 auto;padding:0 32px}
+.section{padding-top:128px;display:flex;flex-direction:column;gap:48px}
+h2{font-size:clamp(32px,4vw,48px);font-weight:600;letter-spacing:-.02em}
+h3{font-size:20px;font-weight:600}
+.lead{font-size:20px;line-height:1.5;color:var(--muted);max-width:640px;text-wrap:pretty}
+.text{font-size:16px;line-height:1.5;color:var(--muted)}
+
+/* Image placeholders */
+.img{border-radius:var(--radius);overflow:hidden;background:var(--ph);display:flex;align-items:center;justify-content:center;padding:16px;text-align:center;color:var(--muted);font-size:14px}
+.img-hero{height:clamp(280px,45vw,600px)}
+.img-43{aspect-ratio:4/3}
+.img-45{aspect-ratio:4/5}
+.img-1610{aspect-ratio:16/10}
+
+/* Hero */
+.hero{padding:96px 0 64px;display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.05;font-weight:700;letter-spacing:-.03em;max-width:900px;text-wrap:balance}
+
+/* Grids */
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.card{display:flex;flex-direction:column;gap:16px}
+.card-text{display:flex;flex-direction:column;gap:4px}
+.card .text{max-width:520px}
+
+/* Beratung */
+.split{padding-top:128px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:64px;align-items:center}
+.split-text{display:flex;flex-direction:column;gap:32px}
+.step{display:flex;flex-direction:column;gap:4px}
+.step .text{max-width:480px}
+.actions{display:flex;gap:16px;flex-wrap:wrap}
+
+/* Leitbild */
+.quote{border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;justify-content:space-between;gap:32px}
+.quote blockquote{font-size:20px;font-weight:600;line-height:1.35;text-wrap:pretty}
+.quote figcaption{display:flex;align-items:center;gap:12px}
+.avatar{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0}
+.quote-meta{display:flex;flex-direction:column}
+.quote-meta strong{font-size:16px;font-weight:600}
+.quote-meta span{font-size:14px;color:var(--muted)}
+
+/* CTA */
+.cta{margin-top:128px;padding:64px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line)}
+.footer-inner{max-width:var(--max);margin:0 auto;padding:48px 32px 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px}
+.footer-brand{display:flex;flex-direction:column;gap:24px}
+.footer-brand strong{font-weight:600;font-size:16px}
+.footer-links{display:flex;gap:16px;font-size:14px}
+.footer-links a{color:var(--muted)}
+.location{display:flex;flex-direction:column;gap:12px;font-size:16px;font-style:normal}
+.location strong{font-weight:600}
+.location span{color:var(--muted)}
+
+@media (max-width:600px){
+  .header-inner,main{padding-left:20px;padding-right:20px}
+  .footer-inner{padding-left:20px;padding-right:20px}
+  .section,.split{padding-top:80px}
+  .cta{margin-top:80px}
+}
+
+.img{padding:0}
+.img img{width:100%;height:100%;object-fit:cover;display:block}
